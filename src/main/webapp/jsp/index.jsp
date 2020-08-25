@@ -5,10 +5,11 @@
 	<div>
 		<div>
 			<h1>Welcome to HIS</h1>
-			<h2>Hello ${message}</h2>
+			<h2>Hello ${msg}</h2>
 
-			Click on this <strong><a href="user">link</a></strong> to User
+			Click on this <strong><a href="user">New Registration</a></strong> to User
 			Registration Page.
+			Click on this <strong><a href="getAllUser">GetAllUser</a></strong> All User
 		</div>
 	</div>
 </body>

@@ -1,5 +1,6 @@
 package com.his.entity;
 
+import java.io.Serializable;
 import java.util.Date;
 
 import javax.persistence.Column;
@@ -25,7 +26,7 @@ import lombok.Setter;
 @NoArgsConstructor
 @Entity
 @Table(name = "User")
-public class UserEntity {
+public class UserEntity implements Serializable {
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	@Column(name = "USER_ID")
@@ -34,38 +35,26 @@ public class UserEntity {
 	@Column(name = "ACC_STATUS")
 	private String accStatus;
 
-	@Column(name = "CITY_ID")
-	private Integer cityId;
-
-	@Column(name = "STATE_ID")
-	private Integer stateId;
-
-	@Column(name = "COUNTRY_ID")
-	private Integer countryId;
-
-	@Column(name = "DOB")
-	private Date dob;
-
 	@Column(name = "FIRST_NAME")
 	private String firstName;
 
 	@Column(name = "GENDER")
 	private String gender;
 
-	@Column(name = "USER_EMAIL")
-	private String userEmail;
+	@Column(name = "EMAIL")
+	private String email;
 
 	@Column(name = "LAST_NAME")
 	private String lastName;
 
-	@Column(name = "USER_PWD")
-	private String userPWD;
+	@Column(name = "PASSWORD")
+	private String password;
 
-	@Column(name = "IS_ACTIVE")
-	private String isActive;
+	@Column(name = "ROLE")
+	private String role;
 
-	@Column(name = "USER_MOBILE")
-	private Long userMobile;
+	@Column(name = "PHONE")
+	private Long phone; 
 
 	@CreationTimestamp
 	@Column(name = "CREATED_DATE", updatable = false)
@@ -74,5 +63,5 @@ public class UserEntity {
 	@UpdateTimestamp
 	@Column(name = "UPDATED_DATE", insertable = false)
 	private Date updatedDate;
-
+ 
 }

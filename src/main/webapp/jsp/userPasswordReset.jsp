@@ -26,7 +26,7 @@
 <div class="panel-body">
 	<h2 style="color: green;">${success}</h2>
 
-	<form:form modelAttribute="user" method="post" action="updateUser"
+	<form:form modelAttribute="user" method="post" action="updateUser" 
 		id="passwordResetUser">
 
 		<form:hidden path="userId" />
@@ -34,17 +34,18 @@
 
 			<tr>
 				<td>Email</td>
-				<td><form:input path="userEmail" id="userEmail"
-						placeholder="Enter a Email" /></td>
-				<form:errors path="userEmail" />
+				<td><form:input path="email" id="email"
+					readonly="true" /></td>
+				<form:errors path="email" />
 			</tr>
 
 			<tr>
 				<td>Password</td>
-				<td><form:input path="userPWD" id="userPWD"
+				<td><form:input path="password" id="password"
 						placeholder="Enter a Password" /></td>
-				<form:errors path="userPWD" />
+				<form:errors path="password" />
 			</tr>
+			
 		</table>
 		<form:button type="submit" class="btn btn-success"
 			onclick="doAjaxPost()">Save</form:button>

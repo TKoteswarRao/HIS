@@ -6,10 +6,9 @@ import org.springframework.scheduling.annotation.EnableAsync;
 
 @SpringBootApplication
 @EnableAsync
-public class UserManagmentApplication {
+public class HISApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(UserManagmentApplication.class, args);
+		SpringApplication.run(HISApplication.class, args);
 	}
-
 }

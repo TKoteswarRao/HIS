@@ -28,7 +28,7 @@ public class EmailUtils {
 		try {
 			MimeMessage mimeMsg = javaMailSender.createMimeMessage();
 			MimeMessageHelper helper = new MimeMessageHelper(mimeMsg);
-			helper.setTo(user.getUserEmail());
+			helper.setTo(user.getEmail());
 			helper.setSubject("Unlock Account");
 			helper.setText(getUnlockEmailBody(user), true);
 			javaMailSender.send(mimeMsg);
@@ -55,8 +55,8 @@ public class EmailUtils {
 		String mailBody = sb.toString();
 		mailBody = mailBody.replace("{FNAME}", user.getFirstName());
 		mailBody = mailBody.replace("{LNAME}", user.getLastName());
-		mailBody = mailBody.replace("{TEMP-PWD}", user.getUserPWD());
-		mailBody = mailBody.replace("{EMAIL}", user.getUserEmail());
+		mailBody = mailBody.replace("{TEMP-PWD}", user.getPassword());
+		mailBody = mailBody.replace("{EMAIL}", user.getEmail());
 		return mailBody;
 	}
 
